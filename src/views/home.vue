@@ -1,39 +1,34 @@
 <template>
-  <section class="container home text-center">
-    <h1>Home Page</h1>
-    <story-list :storys="storys"/>
-    
+  <section class="container ">
+    <story-list :stories="stories" />
   </section>
-
-  
 </template>
 
 <script>
-import storyList from "../cmps/story-list.vue"
-import { storyService } from '../services/story.service.js'
-
+import storyList from "../cmps/story-list.vue";
+import { storyService } from "../services/story.service.js";
 
 export default {
-  name: 'home',
+  name: "home",
   data() {
     return {
-      storys:[]
-    }
+      stories: [],
+    };
   },
-  computed: {
-  },
+  computed: {},
   created() {
-     this.loadStorys()
+    this.loadStories();
   },
   methods: {
-    loadStorys() {
-            storyService.query()
-                .then(storys => {this.storys = storys; console.log(storys)})
-        },
+    loadStories() {
+      storyService.query().then((stories) => {
+        this.stories = stories;
+        console.log(stories);
+      });
+    },
   },
   components: {
-    storyList
+    storyList,
   },
-  
-}
+};
 </script>

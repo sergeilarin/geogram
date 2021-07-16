@@ -1,0 +1,146 @@
+.story-preview{
+    max-width: 602px;
+    border: 1px solid #dbdbdb;
+}
+.story-header{
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+}
+.user-link{
+    display: flex;
+    align-items: center;
+}
+.user-avatar{
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    margin-right: 16px;
+}
+.user-avatar img{
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+}
+.user-name{
+    font-family: Arial,sans-serif;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #262626;
+    font-size: 14px;
+}
+ a:hover{
+    text-decoration: underline;
+}
+
+.story-header-btn{
+    height: 20px;
+    width: 30px;
+    align-items: center;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.story-content{
+    padding: 0px 16px;
+}
+.story-action button:last-of-type {
+    float: right;
+}
+.story-action button:last-of-type :hover{
+   opacity: 0.4;
+}
+.story-action button:not(:first-of-type) {
+    margin-left: 15px;
+}
+.story-action button{
+    cursor: pointer;
+    border: 0;
+    background: none;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+}
+.story-action button img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.likes{
+    font-weight: 600;
+    color: #262626;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
+.story-txt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #262626;
+}
+.story-txt button{
+    cursor: pointer;
+    border: 0;
+    background: none;
+    padding: 0;
+    height: 16px;
+    width: 16px;
+}
+.story-txt button img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.comments{
+    color: #8e8e8e;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
+.story-published-time{
+    color: #8e8e8e;
+    margin-bottom: 10px;
+    font-size: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.story-comment{
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    border-top: 1px solid #e8e8e8;
+}
+textarea{
+    width: 100%;
+    border: 0;
+    resize: none;
+    color: #8e8e8e;
+    background: transparent;
+    height: 21px;
+    outline: 0;
+}
+.story-comment-btn{
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: rgba(var(--d69,0,149,246),1);
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+}

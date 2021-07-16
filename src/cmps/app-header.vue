@@ -1,11 +1,13 @@
 <template>
   <header>
-      <router-link to="/">
-        <span role="img" aria-label="logo">Geogram</span>
-      </router-link>
+    <router-link to="/">
+      <span class="logo">Geogram</span>
+    </router-link>
+    <story-filter @filter="setFilter" />
     <nav>
+      <router-link to="/"><img src="../assets/img/home-fill.png" alt=""></router-link>
       <router-link to="/review">Reviews</router-link>
-      <router-link to="/chat">Chat</router-link>
+      <router-link to="/chat"><img src="../assets/img/send.png" alt=""></router-link>
       <router-link to="/login">Login / Signup</router-link>
     </nav>
     <section class="loggedin-user" v-if="loggedInUser">
@@ -16,12 +18,25 @@
     </section>
   </header>
 </template>
+
+
 <script>
+import storyFilter from "./story-filter.vue";
+
 export default {
+  methods:{
+    setFilter(filterBy) {
+            console.log('hi',filterBy);
+          
+        },
+  },
   computed: {
     loggedInUser() {
-      return this.$store.getters.loggedinUser
+      return this.$store.getters.loggedinUser;
     },
-  }
+  },
+  components: {
+    storyFilter,
+  },
 };
 </script>

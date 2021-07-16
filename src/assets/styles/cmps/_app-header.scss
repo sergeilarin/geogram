@@ -1,34 +1,29 @@
 header {
-    background-color: $clr5;
-    padding: 10px;
+    border-bottom: 1px solid #dbdbdb;
+    height: 54px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 
-    .loggedin-user {
-        background-color: $clr1;
-        padding: 2px 8px;
-        border-radius: 1em;
-        align-self: flex-end;
-        color: whitesmoke;
-        span{
-            background-color: $clr2;
-            padding: 4px;
-            margin: 10px;
-            border-radius: 50%;
-        }
-    }
-    nav {
-        background-color: $clr4;
-        padding: 5px 0;
-        
-    }
-    nav a:not(:first-child) {
-        border-top: 1px solid $clr1;
-        padding: 0 5px;
-        margin: 10px;
-    }
-    nav .active {
-        color: $clr1;
-    }
-    
+}
+.toy-filter{
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+    padding: 4px;
+    width: 215px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+nav{
+    display: flex;
+    height: 22px;
+}
+nav img{
+    height: 100%;
+    width: 22px;
+    object-fit: contain;
 }

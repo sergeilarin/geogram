@@ -6,6 +6,7 @@ import './assets/styles/main.scss'
 import './registerServiceWorker'
 
 Vue.config.productionTip = false
+Vue.use(require('vue-moment'));
 
 new Vue({
   router,

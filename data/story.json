@@ -1,12 +1,12 @@
 [ {
     "_id": "s101",
     "txt": "Best trip ever",
-    "imgUrl": "http://some-img",
+    "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.agoda.com%2Fhe-il%2Fcoco-palm-beach-resort-spa%2Fhotel%2Fphu-quoc-island-vn.html&psig=AOvVaw0PNrDSHyEJ8DazmR4pq2f2&ust=1626440384421000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIjtj9-Q5fECFQAAAAAdAAAAABAD",
     "createdAt": 123543452,
     "by": {
       "_id": "u101",
       "fullname": "Ulash Ulashi",
-      "imgUrl": "http://some-img"
+      "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wired.com%2F2015%2F04%2Ffind-mesmerizing-creatures-web%2F&psig=AOvVaw10p1UsiZB_KgfCTxJlrUtw&ust=1626440320267000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIC2nsCQ5fECFQAAAAAdAAAAABAD"
     },
     "loc": {
       "lat": 11.11,
