@@ -4,26 +4,49 @@ header {
     background-color: #fff;
     position: sticky;
     top: 0;
+    padding: 0 5px;
     z-index: 2;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+}
+.app-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 975px;
+    margin: auto;
+    padding: 0 20px;
+}
+.logo{
+    font-size: 32px;
+    font-family: cookie;
+    color: #262626;
 
 }
-.toy-filter{
+a:hover{
+    text-decoration: none;
+
+}
+.filter{
     border: 1px solid #dbdbdb;
     background-color: #fafafa;
     padding: 4px;
     width: 215px;
     font-size: 14px;
     border-radius: 3px;
+    outline: 0;
 }
 nav{
     display: flex;
     height: 22px;
 }
 nav img{
+    margin-left:22px ;
     height: 100%;
     width: 22px;
     object-fit: contain;
+}
+.avatar{
+    opacity: 0.2;
+    border-radius: 50%;
 }

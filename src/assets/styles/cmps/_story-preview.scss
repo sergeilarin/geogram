@@ -1,5 +1,5 @@
 .story-preview{
-    max-width: 602px;
+    width: 100%;
     border: 1px solid #dbdbdb;
 }
 .story-header{
@@ -25,15 +25,16 @@
     border-radius: 50%;
     height: 42px;
     width: 42px;
+    object-fit: cover;
 }
 .user-name{
-    font-family: Arial,sans-serif;
+    font-family:system-ui;
     line-height: 1.8;
     font-weight: 600;
     color: #262626;
     font-size: 14px;
 }
- a:hover{
+.user-name:hover{
     text-decoration: underline;
 }
 
@@ -69,9 +70,10 @@
 .story-action button img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .likes{
+    font-family:system-ui;
     font-weight: 600;
     color: #262626;
     cursor: pointer;
@@ -81,15 +83,17 @@
 }
 
 .story-txt{
+    font-family:system-ui;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.8;
     color: #262626;
 }
 .story-txt button{
+    font-family: system-ui;
     cursor: pointer;
     border: 0;
     background: none;
@@ -100,9 +104,10 @@
 .story-txt button img{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .comments{
+    font-family: system-ui;
     color: #8e8e8e;
     cursor: pointer;
     border: 0;
@@ -111,6 +116,7 @@
 }
 
 .story-published-time{
+    font-family: system-ui;
     color: #8e8e8e;
     margin-bottom: 10px;
     font-size: 10px;
@@ -119,6 +125,7 @@
 }
 
 .story-comment{
+    font-family: system-ui;
     padding: 0 16px;
     display: flex;
     justify-content: space-between;
@@ -127,15 +134,21 @@
     border-top: 1px solid #e8e8e8;
 }
 textarea{
-    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    font-family: system-ui;
+    font-size: 14px;
+    height: 24px;
+    max-height: 80px;
     border: 0;
     resize: none;
     color: #8e8e8e;
     background: transparent;
-    height: 21px;
+    // height:auto;
     outline: 0;
 }
 .story-comment-btn{
+    font-family: system-ui;
     cursor: pointer;
     background: none;
     border: 0;

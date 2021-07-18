@@ -2,20 +2,23 @@
     box-sizing: border-box;
 }
 
-::selection {
-    background-color: $clr1;
-    color: $clr6;
-}
+// ::selection {
+//     background-color: $clr1;
+//     color: $clr7;
+// }
 
 html {
     font-family: montserrat;
     line-height: 1.6;
-    color: $clr2;
+    color: $clr7;
 }
 
 body {
-    font-size: rem(18px);
+    font-family: Arial,sans-serif;
+    line-height: 1.8;
+    color: $clr7;
     margin: 0;
+    background-color: #fafafa;
     
 }
 

@@ -10,6 +10,7 @@ const gStories = [{
     "createdAt": 123543452,
     "by": {
         "_id": "u101",
+        "username": "Muko",
         "fullname": "Ulash Ulashi",
         "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
     },
@@ -66,6 +67,7 @@ const gStories = [{
     "createdAt": 1576543452,
     "by": {
         "_id": "u122",
+        "username": "masha18",
         "fullname": "masha li",
         "imgUrl": "https://goop-img.com/wp-content/uploads/2020/06/Mask-Group-2.png"
     },
@@ -126,7 +128,8 @@ const gStories = [{
     "createdAt": 1599993452,
     "by": {
         "_id": "u50",
-        "fullname": "mononoke",
+        "username": "mononoke",
+        "fullname": "princess mononoke",
         "imgUrl": "https://images8.alphacoders.com/997/thumb-1920-997783.jpg"
     },
     "loc": {
@@ -180,7 +183,8 @@ const gStories = [{
     "imgUrl": "https://cdn.craftbeer.com/wp-content/uploads/How-to-Pair-Beers-For-Summer.jpg",
     "createdAt": 1626193452,
     "by": {
-        "_id": "122",
+        "_id": "u122",
+        "username": "masha18",
         "fullname": "masha li",
         "imgUrl": "https://goop-img.com/wp-content/uploads/2020/06/Mask-Group-2.png"
     },
@@ -246,6 +250,7 @@ const gStories = [{
     "createdAt": 1626300452,
     "by": {
         "_id": "u90",
+        "username": "jack",
         "fullname": "lumberjack",
         "imgUrl": "https://previews.123rf.com/images/photosvit/photosvit1701/photosvit170101778/69876116-angry-man-or-brutal-lumberjack-bearded-hipster-with-beard-and-moustache-in-red-checkered-shirt-shave.jpg"
     },
@@ -301,6 +306,7 @@ const gStories = [{
     "createdAt": 1626409452,
     "by": {
         "_id": "u70",
+        "username": "stewie",
         "fullname": "stewie griffin",
         "imgUrl": "https://spng.subpng.com/20190228/es/kisspng-stewie-griffin-peter-griffin-lois-griffin-brian-gr-homer-duff-pocket-t-shirt-rarestapparel-5c7791349314d2.5454867415513398286025.jpg"
     },
@@ -352,10 +358,11 @@ const gStories = [{
 },{
     "_id": "s60",
     "txt": "Best trip ever",
-    "imgUrl": "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg",
+    "imgUrl": "https://www.fodors.com/wp-content/uploads/2019/01/take-a-vacation.jpg",
     "createdAt": 123543452,
     "by": {
         "_id": "u60",
+        "username": "Muko",
         "fullname": "Ulash Ulashi",
         "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg"
     },
@@ -420,6 +427,7 @@ function query() {
             if (!stories.length) {
                 stories = gStories
             }
+            localStorage.setItem(STORIES_KEY, JSON.stringify(stories))
             return stories
         })
 }

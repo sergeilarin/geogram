@@ -1,9 +1,9 @@
 [{
     "_id": "u101",
     "username": "Muko",
-    "password": "mukmuk",
-    "fullname": "Muki Muka",
-    "imgUrl": "http://some-img",
+    "password": "Muko",
+    "fullname": "Ulash Ulashi",
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg",
     "createdAt": 123543452,
     "following": [
       {
@@ -19,5 +19,98 @@
         "imgUrl": "http://some-img"
       }
     ],
-    "savedStoryIds": ["s104", "s111", "s123"]
-  }]
+    "savedStoryIds": ["s101", "s111", "s123"]
+  },
+  {
+    "_id": "u122",
+    "username": "masha18",
+    "password": "masha18",
+    "fullname": "masha li",
+    "imgUrl": "https://goop-img.com/wp-content/uploads/2020/06/Mask-Group-2.png",
+    "createdAt": 123543452,
+    "following": [
+      {
+        "_id": "u106",
+        "fullname": "Dob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "followers": [
+      {
+        "_id": "u105",
+        "fullname": "Bob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "savedStoryIds": ["s102","s80"]
+  },
+  {
+    "_id":  "u50",
+    "username": "mononoke",
+    "password": "mononoke",
+    "fullname": "princess mononoke",
+    "imgUrl": "https://images8.alphacoders.com/997/thumb-1920-997783.jpg",
+    "createdAt": 123543452,
+    "following": [
+      {
+        "_id": "u106",
+        "fullname": "Dob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "followers": [
+      {
+        "_id": "u105",
+        "fullname": "Bob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "savedStoryIds": ["s50"]
+  },
+  {
+    "_id":  "u90",
+    "username": "jack",
+    "password": "jack",
+    "fullname": "lumberjack",
+    "imgUrl": "https://previews.123rf.com/images/photosvit/photosvit1701/photosvit170101778/69876116-angry-man-or-brutal-lumberjack-bearded-hipster-with-beard-and-moustache-in-red-checkered-shirt-shave.jpg",
+    "createdAt": 123543452,
+    "following": [
+      {
+        "_id": "u106",
+        "fullname": "Dob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "followers": [
+      {
+        "_id": "u105",
+        "fullname": "Bob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "savedStoryIds": ["s90"]
+  },
+  {
+    "_id":  "u70",
+    "username": "stewie",
+    "password": "stewie",
+    "fullname": "stewie griffin",
+    "imgUrl": "https://spng.subpng.com/20190228/es/kisspng-stewie-griffin-peter-griffin-lois-griffin-brian-gr-homer-duff-pocket-t-shirt-rarestapparel-5c7791349314d2.5454867415513398286025.jpg",
+    "createdAt": 123543452,
+    "following": [
+      {
+        "_id": "u106",
+        "fullname": "Dob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "followers": [
+      {
+        "_id": "u105",
+        "fullname": "Bob",
+        "imgUrl": "http://some-img"
+      }
+    ],
+    "savedStoryIds": ["s70"]
+  }
+]
