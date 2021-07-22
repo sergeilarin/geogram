@@ -69,7 +69,7 @@ export default {
             imgUrl: "http://some-img",
           },
         ],
-        savedStoryIds: ["s70","s71","s72"],
+        savedStoryIds: ["s70","s73"],
       },
     };
   },

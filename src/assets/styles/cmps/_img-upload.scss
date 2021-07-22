@@ -1,0 +1,32 @@
+.img-upload-container{
+  height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+.loader {
+    height: 50px;
+    width: 50px;
+  }
+  
+  label img {
+    height: 100px;
+    cursor: pointer;
+    object-fit: contain;
+    transition: height 0.6s;
+  }
+  
+  input {
+    width: 0;
+    height: 0;
+  }
+  .drag {
+    color: grey;
+    display: inline-block;
+    padding: 30px 5px;
+    width: 220px;
+    border: 1px dashed gray;
+    border-radius: 8px;
+  }

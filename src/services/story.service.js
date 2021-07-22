@@ -43,7 +43,8 @@ const gStories = [{
                 "fullname": "Dob",
                 "imgUrl": "http://some-img"
             },
-            "txt": "not good!"
+            "txt": "not good!",
+            "likedBy": []
         }
     ],
     "likedBy": [
@@ -100,7 +101,8 @@ const gStories = [{
                 "fullname": "momo",
                 "imgUrl": "http://some-img"
             },
-            "txt": "lol "
+            "txt": "lol ",
+            "likedBy": []
         }
     ],
     "likedBy": [
@@ -121,7 +123,7 @@ const gStories = [{
         }
     ],
     "tags": ["fun", "kids"]
-},{
+}, {
     "_id": "s50",
     "txt": "My new car",
     "imgUrl": "https://www.automobilemag.com/uploads/sites/11/2017/12/Shelby-GT-500CR-front-three-quarter-01.jpg",
@@ -161,7 +163,8 @@ const gStories = [{
                 "fullname": "Dob",
                 "imgUrl": "http://some-img"
             },
-            "txt": "not good!"
+            "txt": "not good!",
+            "likedBy": []
         }
     ],
     "likedBy": [
@@ -177,7 +180,65 @@ const gStories = [{
         }
     ],
     "tags": ["fun", "kids"]
-},{
+},
+{
+    "_id": "s73",
+    "txt": "what the hell...",
+    "imgUrl": "https://topreview.com/content/images/2021/03/what-breed-is-brian-1024x405.jpg",
+    "createdAt": 1626409452,
+    "by": {
+        "_id": "u70",
+        "username": "stewie",
+        "fullname": "stewie griffin",
+        "imgUrl": "https://spng.subpng.com/20190228/es/kisspng-stewie-griffin-peter-griffin-lois-griffin-brian-gr-homer-duff-pocket-t-shirt-rarestapparel-5c7791349314d2.5454867415513398286025.jpg"
+    },
+    "loc": {
+        "lat": 11.11,
+        "lng": 22.22,
+        "name": "Tel Aviv"
+    },
+    "comments": [
+        {
+            "id": "c1001",
+            "by": {
+                "_id": "u105",
+                "fullname": "Bob",
+                "imgUrl": "http://some-img"
+            },
+            "txt": "good one!",
+            "likedBy": [
+                {
+                    "_id": "u105",
+                    "fullname": "Bob",
+                    "imgUrl": "http://some-img"
+                }
+            ]
+        },
+        {
+            "id": "c1002",
+            "by": {
+                "_id": "u106",
+                "fullname": "Dob",
+                "imgUrl": "http://some-img"
+            },
+            "txt": "not good!",
+            "likedBy": []
+        }
+    ],
+    "likedBy": [
+        {
+            "_id": "u105",
+            "fullname": "Bob",
+            "imgUrl": "http://some-img"
+        },
+        {
+            "_id": "u106",
+            "fullname": "Dob",
+            "imgUrl": "http://some-img"
+        }
+    ],
+    "tags": ["fun", "kids"]
+}, {
     "_id": "s80",
     "txt": "Burger season is back and a burger wouldn’t be complete without a great beer",
     "imgUrl": "https://cdn.craftbeer.com/wp-content/uploads/How-to-Pair-Beers-For-Summer.jpg",
@@ -217,7 +278,8 @@ const gStories = [{
                 "fullname": "Didi",
                 "imgUrl": "http://some-img"
             },
-            "txt": "i want some too..."
+            "txt": "i want some too...",
+            "likedBy": []
         }
     ],
     "likedBy": [
@@ -243,7 +305,8 @@ const gStories = [{
         }
     ],
     "tags": ["fun", "kids"]
-},{
+},
+{
     "_id": "s90",
     "txt": "North American workers in the logging industry",
     "imgUrl": "https://cdn.agriland.ie/uploads/2019/05/Forestry-Knowledge-Transfer-Group-KTG-Scheme-2019-800x720.jpg",
@@ -283,7 +346,8 @@ const gStories = [{
                 "fullname": "Dob",
                 "imgUrl": "http://some-img"
             },
-            "txt": "not good!"
+            "txt": "not good!",
+            "likedBy": []
         }
     ],
     "likedBy": [
@@ -299,7 +363,7 @@ const gStories = [{
         }
     ],
     "tags": ["fun", "kids"]
-},{
+}, {
     "_id": "s70",
     "txt": "sprint 4 be like",
     "imgUrl": "https://i.pinimg.com/474x/62/1d/10/621d1058e5c677210bf6a71d2ccdbe0e.jpg",
@@ -339,7 +403,8 @@ const gStories = [{
                 "fullname": "Dob",
                 "imgUrl": "http://some-img"
             },
-            "txt": "not good!"
+            "txt": "not good!",
+            "likedBy": []
         }
     ],
     "likedBy": [
@@ -355,7 +420,7 @@ const gStories = [{
         }
     ],
     "tags": ["fun", "kids"]
-},{
+}, {
     "_id": "s60",
     "txt": "Best trip ever",
     "imgUrl": "https://www.fodors.com/wp-content/uploads/2019/01/take-a-vacation.jpg",
@@ -395,7 +460,8 @@ const gStories = [{
                 "fullname": "Dob",
                 "imgUrl": "http://some-img"
             },
-            "txt": "not good!"
+            "txt": "not good!",
+            "likedBy": []
         }
     ],
     "likedBy": [
@@ -418,9 +484,14 @@ const gStories = [{
 export const storyService = {
     query,
     getById,
+    getEmptyStory,
     remove,
     save
 }
+// [{name:'popo', id:'12UBt'},{name:'popo', id:'12UBt'},{name:'popo', id:'12UBt'}]
+// var storyCopy = JSON.parse(JSON.stringify(story))
+// story.title = 'blabla'
+
 function query() {
     return storageService.query(STORIES_KEY)
         .then(stories => {
@@ -444,5 +515,18 @@ function save(story) {
         return storageService.put(STORIES_KEY, story)
     } else {
         return storageService.post(STORIES_KEY, story)
+    }
+}
+function getEmptyStory() {
+    return {
+        "_id": '',
+        "txt": '',
+        "imgUrl": '',
+        "createdAt": '',
+        "by": '',
+        "loc": '',
+        "comments": [],
+        "likedBy": [],
+        "tags": []
     }
 }

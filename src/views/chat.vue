@@ -1,12 +1,15 @@
 <template>
   <div class="container">
+    <h1>About Us</h1>
+    <p>We like You</p>
+    <h2>Lets Chat About {{topic}}</h2>
     <label>
-      <input type="radio" value="masha18" v-model="topic" @change="changeTopic" /> 
-      masha18
+      <input type="radio" value="Politics" v-model="topic" @change="changeTopic" /> 
+      Politics
     </label>
     <label>
-      <input type="radio" value="stewei" v-model="topic" @change="changeTopic" /> 
-      stewei
+      <input type="radio" value="Love" v-model="topic" @change="changeTopic" /> 
+      Love
     </label>
     <ul>
       <li v-for="(msg, idx) in msgs" :key="idx">
@@ -48,6 +51,7 @@ export default {
     sendMsg() {
       console.log('Sending', this.msg);
       socketService.emit('chat newMsg', this.msg)
+      // TODO: next line not needed after connecting to backend
       this.addMsg(this.msg)
       setTimeout(()=>this.addMsg({from: 'Dummy', txt: 'Yey'}), 2000)
       this.msg = {from: 'Me', txt: ''};

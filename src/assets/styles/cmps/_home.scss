@@ -1,0 +1,78 @@
+.modal-story-btn{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
+
+.screen{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    inset: 0;
+}
+.close-screen-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    padding: 0;
+}
+.close-screen-btn img{
+    filter: brightness(0) invert(1);
+}
+.story-add-modal{
+    font-size: 13px;
+    width: 600px;
+    border-radius: 3px;
+    background: #fff;
+    margin: 0 auto;
+    -webkit-animation: appear .35s ease-in 1;
+    animation: appear .35s ease-in 1;
+}
+.modal-title{
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #dbdbdb;
+    margin: 0;
+}
+.story-text-area{
+    margin: 16px;
+    border-top: 1px solid #8e8e8e;;
+    display: block;
+    width: 100%;
+    border: 0;
+    resize: none;
+    color: #8e8e8e;
+    background: transparent;
+}
+.add-story-btn{
+    height: 59px;
+    width: 72px;
+    padding: 16px;
+    float: right;
+    cursor: pointer;
+    border: 0;
+    background: none;
+}
+.add-story-btn img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
